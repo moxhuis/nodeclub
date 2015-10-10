@@ -3,12 +3,12 @@
 <div id='content'>
   <div class='panel'>
     <div class='header'>
-      <ul class='breadcrumb'>
-        <li><a href='/'>主页</a><span class='divider'>/</span></li>
+      <ul class='ui-breadcrumb'>
+        <li><a href='/'>主页</a></li>
         <li class='active'><%= user.loginname %> 收藏的话题</li>
       </ul>
     </div>
-    <div class='inner no-padding'>
+    <div class='inner'>
       <% if (topics.length > 0) { %>
       <%- partial('../topic/list', { topics: topics, pages: pages, current_pages: current_page, base: '/user/' +
       user.loginname + '/collections' }) %>

@@ -3,8 +3,8 @@
 <div id='content'>
   <div class='panel'>
     <div class='header'>
-      <ol class='breadcrumb'>
-        <li><a href='/'>主页</a><span class='divider'>/</span></li>
+      <ol class='ui-breadcrumb'>
+        <li><a href='/'>主页</a></li>
         <% if(typeof(action) !== 'undefined' && action == 'edit'){ %>
         <li class='active'>编辑话题</li>
         <% }else{ %>
@@ -31,7 +31,7 @@
           <% } %>
           <fieldset>
             <span class="tab-selector">选择版块：</span>
-            <select name="tab" id="tab-value">
+            <select name="tab" id="tab-value" >
               <option value="">请选择</option>
               <%
               var tabValue = '';
@@ -85,7 +85,7 @@
   (function () {
     var editor = new Editor();
     editor.render($('.editor')[0]);
-
+    
     // 版块选择的检查，必须选择
     $('#create_topic_form').on('submit', function (e) {
       var tabValue = $('#tab-value').val();

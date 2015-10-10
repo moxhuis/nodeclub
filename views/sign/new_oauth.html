@@ -1,13 +1,13 @@
 <div id='content'>
   <div class='panel'>
     <div class='header'>
-      <ul class='breadcrumb'>
-        <li><a href='/'>主页</a><span class='divider'>/</span></li>
+      <ul class='ui-breadcrumb'>
+        <li><a href='/'>主页</a></li>
         <li class='active'>重置密码</li>
       </ul>
     </div>
     <div class='inner'>
-      <form id='signin_form' class='form-horizontal' action=<%= actionPath
+      <form id='signin_form' class='ui-form form-horizontal' action=<%= actionPath
       %> method='post'>
       <input type='hidden' name='_csrf' value='<%= csrf %>'/>
       <input type='hidden' name='isnew' value='1'/>
@@ -21,7 +21,7 @@
       </div>
       </form>
 
-      <form id='signin_form' class='form-horizontal' action=<%= actionPath
+      <form id='signin_form' class='ui-form form-horizontal' action=<%= actionPath
       %> method='post'>
       <div class='control-group'>
         <label class='controls'>或者</label>

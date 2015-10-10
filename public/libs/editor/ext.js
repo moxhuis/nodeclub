@@ -31,13 +31,13 @@
     var ToolLink = function(){
         var self = this;
         this.$win = $([
-            '<div class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="editorToolImageTitle" aria-hidden="true">',
+            '<div class="ui-modal hide fade" tabindex="-1" role="dialog" aria-labelledby="editorToolImageTitle" aria-hidden="true">',
                 '<div class="modal-header">',
-                    '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>',
+                    '<button type="button" class="ui-close" data-dismiss="modal" aria-hidden="true">×</button>',
                     '<h3 id="editorToolImageTitle">添加连接</h3>',
                 '</div>',
                 '<div class="modal-body">',
-                    '<form class="form-horizontal">',
+                    '<form class="ui-form form-horizontal">',
                         '<div class="control-group">',
                             '<label class="control-label">标题</label>',
                             '<div class="controls">',
@@ -84,9 +84,9 @@
     var ToolImage = function(){
         var self = this;
         this.$win = $([
-            '<div class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="editorToolImageTitle" aria-hidden="true">',
+            '<div class="ui-modal hide fade" tabindex="-1" role="dialog" aria-labelledby="editorToolImageTitle" aria-hidden="true">',
                 '<div class="modal-header">',
-                    '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>',
+                    '<button type="button" class="ui-close" data-dismiss="modal" aria-hidden="true">×</button>',
                     '<h3 id="editorToolImageTitle">图片</h3>',
                 '</div>',
                 '<div class="modal-body">',
