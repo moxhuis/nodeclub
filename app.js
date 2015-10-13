@@ -1,4 +1,4 @@
-/*!
+/**
  * nodeclub - app.js
  */
 

@@ -1,6 +1,6 @@
-<div id="topic_list">
+<ul id="topic_list" class="ui-nav">
   <%- partial('../topic/abstract', {collection:topics, as:'topic'}) %>
-</div>
+</ul>
 <div class='ui-pagination' current_page='<%= current_page %>'>
   <ul>
     <% var base_url = base + (base.indexOf('?') < 0 ? '?' : '&')

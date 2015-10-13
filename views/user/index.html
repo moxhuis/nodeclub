@@ -54,25 +54,25 @@
       <p class='col_fade'>注册时间 <%= user.create_at_ago() %></p>
       <% if (current_user && current_user.is_admin) { %>
       <% if (!user.is_star) { %>
-      <span class='span-common' id='set_star_btn' action='set_star'>设为达人</span>
+      <span class='ui-btn' id='set_star_btn' action='set_star'>设为达人</span>
       <% } else { %>
-      <span class='span-common' id='set_star_btn' action='cancel_star'>取消达人</span>
+      <span class='ui-btn' id='set_star_btn' action='cancel_star'>取消达人</span>
       <% } %>
 
       <% if (!user.is_block) { %>
-      <span class='span-common' id='set_block_btn' action='set_block'>屏蔽用户</span>
+      <span class='ui-btn' id='set_block_btn' action='set_block'>屏蔽用户</span>
       <% } else { %>
-      <span class='span-common' id='set_block_btn' action='cancel_block'>取消屏蔽用户</span>
+      <span class='ui-btn' id='set_block_btn' action='cancel_block'>取消屏蔽用户</span>
       <% } %>
 
-      <span class="span-common" id="delete_all">删除所有发言</span>
+      <span class="ui-btn" id="delete_all">删除所有发言</span>
 
       <br/><br/>
       Email (Seen by Administrator): <a href="mailto:<%= user.email %>"><%= user.email %></a>
       <% if (!user.active) { %>
       <a href="/active_account?key=<%- typeof(token) !== 'undefined' && token %>&name=<%= user.loginname %>"
          target="_blank">
-         <span class="span-common">
+         <span class="ui-btn">
            激活账号
          </span>
        </a>
@@ -86,10 +86,12 @@
       <span class='col_fade'>最近创建的话题</span>
     </div>
     <% if (typeof(recent_topics) !== 'undefined' && recent_topics.length > 0) { %>
+    <ul class="ui-nav">
     <%- partial('../topic/abstract', { collection: recent_topics, as: 'topic' }) %>
-    <div class='cell more'>
-      <a class='dark' href="/user/<%= user.loginname %>/topics">查看更多»</a>
-    </div>
+      <li class='cell more'>
+        <a class='dark' href="/user/<%= user.loginname %>/topics">查看更多»</a>
+      </li>
+    </ul>
     <% } else { %>
     <div class='inner'>
       <p>无话题</p>
@@ -102,10 +104,12 @@
       <span class='col_fade'>最近参与的话题</span>
     </div>
     <% if (typeof(recent_replies) !== 'undefined' && recent_replies.length > 0) { %>
+    <ul class="ui-nav">
     <%- partial('../topic/abstract', { collection: recent_replies, as: 'topic' }) %>
-    <div class='cell more'>
-      <a class='dark' href="/user/<%= user.loginname %>/replies">查看更多»</a>
-    </div>
+      <li class='cell more'>
+        <a class='dark' href="/user/<%= user.loginname %>/replies">查看更多»</a>
+      </li>
+    </ul>
     <% } else { %>
     <div class='inner'>
       <p>无话题</p>

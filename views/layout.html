@@ -70,7 +70,8 @@
     <div class='ui-container'>
       <a class='ui-brand' href='/'>
         <% if (config.site_logo) {%>
-          <img src="<%- staticFile(config.site_logo) %>" />
+          <img src="<%- staticFile(config.site_logo) %>" width="34"/>
+          superFE
         <%} else {%>
           <%- config.name %>
         <%}%>
@@ -91,7 +92,6 @@
             </a>
         </li>
         <% } %>
-        <li><a href='/getstart'>新手入门</a></li>
         <li><a href='/api'>API</a></li>
         <%
         var site_navs = config.site_navs || [];
