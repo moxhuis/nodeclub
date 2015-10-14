@@ -51,7 +51,16 @@
     "utils-merge": "^1.0.0",
     "validator": "3.22.1",
     "xmlbuilder": "2.5.0",
-    "xss": "0.1.15"
+    "xss": "0.1.15",
+    "coveralls": "2.11.2",
+    "errorhandler": "1.2.2",
+    "istanbul": "0.3.2",
+    "mm": "0.2.1",
+    "mocha": "2.0.1",
+    "nock": "1.4.0",
+    "pedding": "1.0.0",
+    "should": "4.1.0",
+    "supertest": "0.14.0"
   },
   "devDependencies": {
     "coveralls": "2.11.2",
